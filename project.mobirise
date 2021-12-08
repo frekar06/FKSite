@@ -31,7 +31,9 @@
       "titlePreset": "Youtube Video Creator",
       "nameSelectPreset": "youtube-video-creator",
       "presetSourceTheme": "creatorm5",
-      "additionalSetColors": []
+      "additionalSetColors": [
+        "#000101"
+      ]
     },
     "path": "@PROJECT_PATH@",
     "name": "Fredriks sida",
@@ -52,7 +54,7 @@
     "siteUrl": false,
     "cookiesAlert": false,
     "gdpr": false,
-    "uniqCompNum": 15,
+    "uniqCompNum": 17,
     "versionPublish": "5.5.0",
     "screenshot": "screenshot.png",
     "publishChangesOnly": true
@@ -467,8 +469,10 @@
         {
           "alias": false,
           "_styles": {
-            "padding-top": "(@paddingTop * 1rem)",
-            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
             "& when (@bg-type = \"color\")": {
               "background-color": "@bg-value"
             },
@@ -491,120 +495,47 @@
               "text-align": "left"
             },
             ".mbr-text": {
-              "color": "#5f5d68",
-              "margin-bottom": "28px"
+              "color": "#8c8c95",
+              "margin-bottom": "36px"
             },
             ".right-side": {
               "max-width": "554px"
             },
+            ".rs": {
+              "margin-right": "60px"
+            },
             ".mbr-section-btn": {
               "width": "auto",
-              "display": "block"
+              "display": "inline-block"
             },
             ".margin": {
               "margin-right": "14px"
             },
-            ".shadow": {
-              "padding": "62px 56px 64px",
-              "box-shadow": "0 5px 16px 0 rgba(8, 15, 52, 0.07)",
-              "max-width": "568px",
-              "overflow": "hidden",
-              "border-style": "solid",
-              "border-width": "1px",
-              "border-color": "#eff0f6",
-              "border-radius": "24px",
-              "background-color": "#fff"
-            },
-            ".socicon-bg-youtube": {
-              "background-color": "@icon1"
-            },
-            ".socicon-bg-facebook": {
-              "background-color": "@icon2"
-            },
-            ".socicon-bg-twitter": {
-              "background-color": "@icon3"
-            },
-            ".socicon-bg-pinterest": {
-              "background-color": "@icon4"
-            },
-            ".socicon-bg-mail": {
-              "background-color": "@icon5"
-            },
-            ".mbr-iconfont": {
-              "margin-left": "0",
-              "margin-right": "0"
-            },
-            ".btn-social": {
-              "margin": "0 !important",
-              "font-size": "14px",
-              "border-radius": "50%",
-              "padding": "0",
-              "width": "32px",
-              "height": "32px",
-              "line-height": "44px",
-              "text-align": "center",
-              "position": "relative",
-              "border": "none !important",
-              "cursor": "pointer",
-              ".mbr-iconfont": {
-                "top": "0",
-                "line-height": "22px",
-                "width": "22px",
-                "color": "#fff",
-                "&:hover": {
-                  "color": "#fff !important"
-                }
-              },
-              "&:hover": {
-                "color": "#fff"
-              },
-              "& + .btn": {
-                "margin-left": "0.1rem"
-              }
+            ".gray": {
+              "padding": "45px 0",
+              "background-color": "@accentColor"
             },
             "img": {
-              "max-width": "186px",
-              "height": "auto",
-              "border-radius": "50%",
-              "margin-bottom": "17px"
+              "position": "relative",
+              "right": "40px"
             },
-            ".mbr-social-likes": {
-              "max-width": "454px"
-            },
-            ".card-title": {
-              "margin-bottom": "4px",
-              "color": "#14142b"
-            },
-            ".card-subtitle": {
-              "margin-bottom": "21px",
-              "color": "#8c8c95"
-            },
-            ".card-text": {
-              "margin-bottom": "40px",
-              "color": "#8c8c95"
-            },
-            "@media (max-width: 768px)": {
-              ".shadow": {
-                "margin-top": "30px"
+            "@media (max-width: 767px)": {
+              ".gray": {
+                "padding": "0px 0 5px"
+              },
+              "img": {
+                "right": "initial",
+                "width": "90%",
+                "margin": "auto",
+                "top": "-35px"
+              },
+              ".col-md-5": {
+                "padding-top": "90px"
               }
             },
-            "@media (max-width: 1010px)": {
-              ".margin": {
-                "margin-right": "0px",
-                "margin-bottom": "15px"
-              },
-              ".button-align": {
-                "display": "flex",
-                "flex-direction": "column"
-              }
-            },
-            "@media (max-width: 992px)": {
-              ".shadow": {
-                "margin": "auto"
-              },
-              ".right-side": {
-                "max-width": "initial",
-                "margin-bottom": "50px"
+            "@media (max-width: 430px)": {
+              ".b": {
+                "margin-bottom": "10px"
               }
             },
             ".btn": {
@@ -618,26 +549,19 @@
                 "flex-direction": "row-reverse"
               }
             },
-            "@media (max-width: 767px)": {
-              ".card.home-about-host": {
-                "padding": "52px 40px 54px"
-              }
-            },
-            "@media (max-width: 479px)": {
-              ".card.home-about-host": {
-                "padding": "43px 25px 45px"
-              }
+            ".mbr-text, .button-align": {
+              "color": "#000101"
             }
           },
-          "_name": "people5",
+          "_name": "header1",
           "_sourceTheme": "creatorm5",
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"people5\" group=\"People\">\n    <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" name=\"fullWidth\" title=\"Full Width\" checked>\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n    <input type=\"checkbox\" title=\"Reverse\" name=\"reverseContent\">\n    <header>Items</header>\n    <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n    <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n    <input type=\"checkbox\" title=\"Button\" name=\"showButton\" checked>\n    <input type=\"checkbox\" title=\"Name\" name=\"showName\" checked>\n    <input type=\"checkbox\" title=\"Role\" name=\"showRole\">\n    <input type=\"checkbox\" title=\"Card Text\" name=\"showCardText\" checked>\n    <header>Socials</header>\n    <input type=\"checkbox\" title=\"Icons\" name=\"showIcons\">\n    <select title=\"Social Count\" name=\"iconsCount\" condition=\"showIcons == true\">\n        <option value=\"1\">1</option>\n        <option value=\"2\">2</option>\n        <option value=\"3\">3</option>\n        <option value=\"4\">4</option>\n        <option value=\"5\" selected>5</option>\n    </select>\n    <input type=\"color\" title=\"Color 1\" name=\"icon1\" value=\"#c4302b\" condition=\"showIcons == true\">\n    <input type=\"color\" title=\"Color 2\" name=\"icon2\" value=\"#3e5b98\" condition=\"showIcons == true &amp;&amp; iconsCount > 1\">\n    <input type=\"color\" title=\"Color 3\" name=\"icon3\" value=\"#4da7de\" condition=\"showIcons == true &amp;&amp; iconsCount > 2\">\n    <input type=\"color\" title=\"Color 4\" name=\"icon4\" value=\"#c92619\" condition=\"showIcons == true &amp;&amp; iconsCount > 3\">\n    <input type=\"color\" title=\"Color 5\" name=\"icon5\" value=\"#134785\" condition=\"showIcons == true &amp;&amp; iconsCount > 4\">\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\">\n        <input type=\"color\" title=\"Color\" value=\"#f7f7f7\" selected>\n        <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n    </fieldset>\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-between\">\n            <div class=\"col-12 col-lg-6\">\n                <div class=\"right-side\">\n                    <h5 class=\"mbr-section-title mbr-fonts-style\" mbr-theme-style=\"display-2\" data-app-selector=\".mbr-section-title\" mbr-if=\"showTitle\"><b>Fredriks podcast</b></h5>\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".mbr-text, .button-align\" mbr-if=\"showText\">Fredriks podcast tar ett ämnesövergripande perspektiv på olika länder utifrån samhällsvetenskap och humaniora. Syftet med Fredriks podcast är att bidra med information och kunskap om andra länders levnadssätt, kulturer, historia, geografi och religion för att öka toleransen för andra människors livsval och för likheter och skillnader mellan människor. \n<br>\n<br></p>\n                    <div class=\"button-align\">\n                        <div class=\"mbr-section-btn\" mbr-if=\"showButton\" mbr-buttons mbr-theme-style=\"display-4\"><a class=\"btn btn-black\" href=\"https://frekar06.github.io/FKPodcast/\" data-app-placeholder=\"Type Text\" target=\"_blank\">Fredriks podcast</a>\n\n                            <a class=\"btn btn-warning\" href=\"https://soundcloud.com/fredrik-karlsson-861213/tracks\" data-app-placeholder=\"Type Text\" target=\"_blank\">Profil på Soundcloud</a></div>\n                    </div>\n                </div>\n            </div>\n            <div class=\"col-12 col-lg-6\">\n                <div class=\"left-side\">\n                    <div class=\"shadow\">\n                        <img src=\"@PROJECT_PATH@/assets/images/dsc-2441-372x496.jpeg\" alt=\"Mobirise\" class=\"align\">\n                        <h5 class=\"card-title mbr-fonts-style\" mbr-theme-style=\"display-2\" data-app-selector=\".card-title\" mbr-if=\"showName\"><b>Produktionsansvarig</b></h5>\n                        <h5 class=\"card-subtitle mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".card-subtitle\" mbr-if=\"showRole\">\n                            Producent och utgivare av podcast</h5>\n                        <h5 class=\"card-text mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".card-text, .mbr-social-likes\" mbr-if=\"showCardText\">Fredriks podcast produceras och publiceras av mig som heter Fredrik Karlsson. Fredriks podcast distribueras via min webbsida Fredriks podcast och via Soundcloud.&nbsp;</h5>\n                        <div class=\"mbr-social-likes\" mbr-if=\"showIcons\">\n                            <span class=\"btn btn-social socicon-bg-youtube youtube mx-2\">\n                                <span mbr-icon class=\"mbr-iconfont socicon-youtube socicon\"></span>\n                            </span>\n                            <span class=\"btn btn-social socicon-bg-facebook facebook mx-2\" mbr-if=\"iconsCount > 1\">\n                                <span mbr-icon class=\"mbr-iconfont socicon-facebook socicon\"></span>\n                            </span>\n                            <span class=\"btn btn-social twitter socicon-bg-twitter mx-2\" mbr-if=\"iconsCount > 2\">\n                                <span mbr-icon class=\"mbr-iconfont socicon-twitter socicon\"></span>\n                            </span>\n                            <span class=\"btn btn-social pinterest socicon-bg-pinterest mx-2\" mbr-if=\"iconsCount > 3\">\n                                <span mbr-icon class=\"mbr-iconfont socicon-pinterest socicon\"></span>\n                            </span>\n                            <span class=\"btn btn-social mailru socicon-bg-mail mx-2\" mbr-if=\"iconsCount > 4\">\n                                <span mbr-icon class=\"mbr-iconfont mobi-mbri-letter mobi-mbri\"></span>\n                            </span>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_cid": "sR1XsGKX0m",
-          "_anchor": "people5-e",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"header1\" group=\"Headers\" mbr-class=\"{'mbr-fullscreen': fullScreen}\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" name=\"fullWidth\" title=\"Full Width\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" title=\"Reverse\" name=\"reverseContent\">\n        <header>Items</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Button\" name=\"showButton\" checked>\n        <input type=\"color\" title=\"Accent\" name=\"accentColor\" value=\"#eff0f6\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"color\" title=\"Color\" value=\"#e2e3e9\" selected>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row\">\n            <div class=\"col-12 col-md-6\">\n                <div class=\"right-side\">\n                    <h5 class=\"mbr-section-title mbr-fonts-style\" mbr-theme-style=\"display-1\" data-app-selector=\".mbr-section-title\" mbr-if=\"showTitle\">\n                        <b>Fredriks podd</b></h5>\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".mbr-text, .button-align\" mbr-if=\"showText\">\n                        Fredriks podcast tar ett ämnesövergripande perspektiv på olika länder utifrån samhällsvetenskap och humaniora. Syftet med Fredriks podcast är att bidra med information och kunskap om andra länders levnadssätt, kulturer, historia, geografi och religion för att öka toleransen för andra människors livsval och för likheter och skillnader mellan människor.\n                    </p>\n                    <div class=\"button-align\">\n                        <div class=\"mbr-section-btn\" mbr-if=\"showButton\" mbr-buttons mbr-theme-style=\"display-4\"><a class=\"btn btn-primary\" href=\"https://frekar06.github.io/FKPodcast/\" data-app-placeholder=\"Type Text\" target=\"_blank\">Fredriks podd</a><a class=\"btn btn-info\" href=\"https://soundcloud.com/fredrik-karlsson-861213/tracks\" data-app-placeholder=\"Type Text\" target=\"_blank\">Profil på Soundcloud</a></div>\n                    </div>\n                </div>\n            </div>\n            <div class=\"col-12 col-md-5\">\n                <div class=\"gray\">\n                    <img src=\"@PROJECT_PATH@/assets/images/19001-9-952x952.png\" alt=\"Mobirise\" class=\"align\">\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "sR242eRXAY",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
-          "_params": {}
+          "_params": {},
+          "_anchor": "header1-g"
         },
         {
           "alias": false,
